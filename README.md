@@ -79,5 +79,10 @@ relDif  : 1.6464292361378058e-12)
 
 Complete API docs are available at [https://docs.balancer.finance/smart-contracts/api](https://docs.balancer.finance/smart-contracts/api)
 
+## Deploy
+
+```
+truffle migrate --network cascadia migrations/2_deploy_factories.js
+```
 
 <p align=center>⊙</p>

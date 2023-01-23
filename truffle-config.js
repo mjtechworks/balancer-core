@@ -1,3 +1,8 @@
+require('dotenv').config()
+
+const HDWalletProvider = require('@truffle/hdwallet-provider')
+const MNEMONIC = process.env.MNEMONIC
+
 module.exports = {
     networks: {
         development: {
@@ -12,6 +17,10 @@ module.exports = {
             port: 8555,
             gas: 0xfffffffffff,
             gasPrice: 0x01,
+        },
+        cascadia: {
+            provider: () => new HDWalletProvider(MNEMONIC, 'https://devnet.cascadia.foundation'),
+            network_id: '*',
         },
     },
     // Configure your compilers
